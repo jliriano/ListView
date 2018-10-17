@@ -24,10 +24,10 @@ public class MainActivity extends AppCompatActivity implements ListView.OnItemCl
 
         myListView = findViewById(R.id.myListView);
 
-        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(
+        ArrayAdapter adaptador = ArrayAdapter.createFromResource(
                 this,
-                android.R.layout.simple_list_item_1,
-                datos);
+                R.array.datos,
+                android.R.layout.simple_expandable_list_item_1);
 
         myListView.setAdapter(adaptador);
         myListView.setOnItemClickListener(this);
